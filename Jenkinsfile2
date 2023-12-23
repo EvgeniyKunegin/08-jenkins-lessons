@@ -19,19 +19,19 @@ pipeline {
                     script {
                         gv.buildapp
                        }
-                    }
                 }
+            }
             stage("test") {
                 when {
                     expression {
                         params.executeTests
                              }
-                    }
+                }
                 steps {
                     script {
                         gv.testapp
                         }
-                    }
+                }
             }
             stage("deploy") {
                 steps {
